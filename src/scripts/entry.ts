@@ -1,6 +1,6 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { isSp, matchSp, qs } from './utils'
+import { isSp, matchSp, qs, resolvePath } from './utils'
 
 gsap.registerPlugin(ScrollTrigger)
 const video = qs<HTMLVideoElement>('.video-container .video')
@@ -26,7 +26,8 @@ if (isSp()) {
 
   new ScrollyVideo({
     scrollyVideoContainer: 'scrolly-video',
-    src: video.src,
+    // src: video.src,
+    src: resolvePath('videos/7.37mb_20s.mp4'),
     cover: true,
     full: true,
   })
