@@ -27,7 +27,7 @@ if (isSp()) {
   new ScrollyVideo({
     scrollyVideoContainer: 'scrolly-video',
     // src: video.src,
-    src: resolvePath('videos/7.37mb_20s.mp4'),
+    src: resolvePath('videos/7.37mb_20s_.mp4'),
     cover: true,
     full: true,
   })
