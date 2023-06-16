@@ -10,3 +10,11 @@ export function qs<T extends HTMLElement>(selectors: string) {
 export function qsAll<T extends HTMLElement>(selectors: string) {
   return document.querySelectorAll<T>(selectors)
 }
+
+export function matchSp() {
+  return matchMedia('(max-width: 750px)')
+}
+
+export function isSp() {
+  return matchSp().matches
+}
