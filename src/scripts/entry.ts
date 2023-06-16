@@ -22,7 +22,7 @@ if (isSp()) {
   })
 } else {
   // PCの場合は、ScrollyVideoを使う
-  const ScrollyVideo = (window as any).ScrollyVideo
+  const { ScrollyVideo } = window as any
 
   new ScrollyVideo({
     scrollyVideoContainer: 'scrolly-video',
