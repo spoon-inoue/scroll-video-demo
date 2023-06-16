@@ -1,6 +1,6 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { isSp, matchSp, qs, resolvePath } from './utils'
+import { isSp, matchSp, resolvePath } from './utils'
 
 gsap.registerPlugin(ScrollTrigger)
 const video = document.querySelector<HTMLVideoElement>('.video-container .video')
