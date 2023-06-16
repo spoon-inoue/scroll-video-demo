@@ -3,7 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { isSp, matchSp, resolvePath } from './utils'
 
 gsap.registerPlugin(ScrollTrigger)
-const video = document.querySelector<HTMLVideoElement>('.video-container .video')
+const video = document.querySelector<HTMLVideoElement>('.video-container .video')!
 let tl: gsap.core.Timeline
 
 if (isSp()) {
@@ -17,7 +17,7 @@ if (isSp()) {
     },
   })
 
-  video?.addEventListener('loadedmetadata', () => {
+  video.addEventListener('loadedmetadata', () => {
     tl.fromTo(video, { currentTime: 0 }, { currentTime: video?.duration })
   })
 } else {
@@ -26,7 +26,7 @@ if (isSp()) {
 
   new ScrollyVideo({
     scrollyVideoContainer: 'scrolly-video',
-    src: video?.src ?? resolvePath('videos/7mb_20s.mp4'),
+    src: video.src,
     cover: true,
     full: true,
   })
